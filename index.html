@@ -51,16 +51,17 @@
   </header>
   <!-- menubar ends -->
 
-  <ul class="category-list">
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-  </ul>
+  <!-- patch1, asking for 3 lis, not 4 | it says 'h-container' not 'h-container container'-->
+
+  <header class="h-container">
+    <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </header>
+
+  <!-- end of patch1 -->
 
   
 
@@ -88,7 +89,7 @@
             class="form-control my-1 w-100">
         </div>
         <div class="col-sm-2 col-12 p-1">
-          <button class="search-btn btn btn-danger my-1 w-100">Search</button>
+          <button class="search-btn btn btn-danger my-1 w-100" id="search-btn">Search</button>
         </div>
       </div>
     </div>
@@ -157,14 +158,17 @@
         <h1 class="my-1 mb-2">Order Food Online</h1>
         <small>Best restaurants delivering to your doorstep.</small>
         <div class="mt-2 subwidget p-2">
-          <div class="widget p-2">
+          <div class="widget">
             <h4>Enter your delivery location</h4>
             <div class="row my-1 p-2">
               <div class="col-8 p-1">
-                <input type="text" class="search-del form-control mt-2" placeholder="Type delivery location here">
+                <input type="text" class="search-del form-control mt-2" id="search-del" placeholder="Type delivery location here">
               </div>
               <div class="col-4 p-1">
                 <button class="detect-btn mt-2 btn btn-outline-secondary">Detect</button>
+                <!-- patch7 -->
+                <button class="detect-btn">Detect</button>
+                <!-- end of patch7 -->
               </div>
             </div>
             <button class="order-btn btn btn-success w-100  my-1">Order Food Online!</button>
@@ -210,6 +214,28 @@
     </ul>
   </section>
   <!-- quicksearch ends -->
+
+
+<!-- patch5 -->
+
+<ul class="category-list">
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+</ul>
+
+<!-- end of patch5 -->
+
+
+
+
+
+
 
   <!-- localtities starts user-story5-->
   <section class="localities container">
